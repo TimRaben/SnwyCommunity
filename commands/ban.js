@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
         .setColor("#ff0000")
         .setAuthor('Snwy Community', "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
         .setTitle("Snwy Community - Ban Systeem")
-        .setThumbnail(banUser.user.displayAvatarURL)
+        .setThumbnail("https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
         .setFooter('Snwy Community • Verbanning • Alle Rechten Voorbehoud')
         .setTimestamp()
         .setDescription(`**Lid** ${banUser} (${banUser.id})
