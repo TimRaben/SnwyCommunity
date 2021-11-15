@@ -1,12 +1,12 @@
 const discord = require("discord.js");
 
-module.exports.run = async (client, message, args, mentions) => {
+module.exports.run = async (client, message, args) => {
 
     if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply(":x: **-** Jij bent niet gemachtigd dit commando uit te voeren!");
 
     if (!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply(":x: **-** FOUT! Ik ben niet gemachtigd om deze actie uit te voeren voor jou.");
 
-    var banUser = mentions.users.first()
+    var banUser = message.mentions.members.first();
 
     var reason = args.slice(2).join(" ");
 
