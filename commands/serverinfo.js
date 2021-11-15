@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
             '**➠ Servernaam:** De Tech Snwy Community',
             `**➠ Eigenaar:** ${message.guild.owner.user.tag}`,
             `**➠ Boost Level:** ${message.guild.premiumTier}`,
-            `**➠ Gemaakt op:** ${message.guild.createdTimestamp}`,
+            `**➠ Gemaakt op:** ${moment(guild.createdTimestamp).format('LT')} ${moment(guild.createdTimestamp).format('LL')} ${moment(guild.createdTimestamp).fromNow()}`,
             `**➠ Aantal Leden:** ${message.guild.memberCount}`,
         ])
         .setTimestamp();
