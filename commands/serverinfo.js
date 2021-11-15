@@ -14,7 +14,8 @@ module.exports.run = async (client, message, args) => {
             `**➠ Gemaakt op:** 22-05-2021`,
             `**➠ Aantal Leden:** ${message.guild.memberCount}`,
         ])
-        .setTimestamp();
+        .setTimestamp()
+        .setFooter('Snwy Community | Server Informatie');
 
     message.channel.send(embed);
 
