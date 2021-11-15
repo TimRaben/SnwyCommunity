@@ -14,12 +14,6 @@ module.exports.run = async (client, message, args) => {
             `**➠ Gemaakt op:** ${message.guild.createdTimestamp}`,
             `**➠ Aantal Leden:** ${message.guild.memberCount}`,
         ])
-        .addField(`Leden Informatie`, [
-            `**➠ Online:** ${member.filter(member => member.presence.status === 'online')}`,
-            `**➠ Inactief:** ${member.filter(member => member.presence.status === 'idle')}`,
-            `**➠ Niet Storen:** ${member.filter(member => member.presence.status === 'dnd')}`,
-            `**➠ Offline:** ${member.filter(member => member.presence.status === 'offline')}`,
-        ])
         .setTimestamp();
 
     message.channel.send(embed);
