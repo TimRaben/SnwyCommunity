@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    msg.delete();
+    message.delete();
 
     if (!args[0]) return message.reply(":x: **-** Geef een geldig bericht op!");
 
