@@ -12,12 +12,7 @@ module.exports.run = async (client, message, args) => {
             `**➠ Eigenaar:** ${message.guild.owner.user.tag}`,
             `**➠ Boost Level:** ${message.guild.premiumTier}`,
             `**➠ Gemaakt op:** ${message.guild.createdTimestamp}`,
-        ])
-        .addField(`Statestieken`, [
             `**➠ Aantal Leden:** ${message.guild.memberCount}`,
-            `**➠ Aantal BOTS:** ${members.filter(member => member.user.bot).size}`,
-            `**➠ Aantal Tekstkanalen:** ${channels.filter(channel => channel.type === 'text').size}`,
-            `**➠ Aantal Boosts:** ${message.guild.premiumSubscriptionCount}`,
         ])
         .addField(`Leden Informatie`, [
             `**➠ Online:** ${members.filter(member => member.presence.status === 'online')}`,
