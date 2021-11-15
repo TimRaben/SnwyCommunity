@@ -10,8 +10,8 @@ module.exports.run = async (client, message, args) => {
         .addField(`Server`, [
             '**➠ Servernaam:** De Tech Snwy Community',
             `**➠ Eigenaar:** ${message.guild.owner.user.tag}`,
-            `**➠ Boost Level:** ${message.guild.premiumTier}`
-            `**➠ Gemaakt op:** ${(message.guild.createdTimestamp)}`
+            `**➠ Boost Level:** ${message.guild.premiumTier}`,
+            `**➠ Gemaakt op:** ${message.guild.createdTimestamp}`,
         ])
         .addField(`Statestieken`, [
             `**➠ Aantal Rollen:** ${roles.length}`,
