@@ -39,7 +39,7 @@ module.exports.run = async (client, message, args) => {
             msg.delete();
 
 
-            banUser.ban(reason).catch(err => {
+            message.guild.member(message.mentions.users.first()).ban(reason).catch(err => {
                 if (err) return message.channel.send(`:x:  **|** Verbanning mislukt!`);
             });
 
