@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
 
     if (!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply(":x: **-** FOUT! Ik ben niet gemachtigd om deze actie uit te voeren voor jou.");
 
-    var banUser = message.author
+    var banUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
 
     var reason = args.slice(2).join(" ");
 
