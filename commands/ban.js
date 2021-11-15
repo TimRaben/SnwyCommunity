@@ -38,7 +38,7 @@ module.exports.run = async (client, message, args) => {
 
             msg.delete();
 
-            message.mentions.users.first().ban(reason);
+            message.mentions.users.first().ban(reason)
 
             message.reply(embed);
 
