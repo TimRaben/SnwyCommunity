@@ -15,10 +15,10 @@ module.exports.run = async (client, message, args) => {
             `**➠ Aantal Leden:** ${message.guild.memberCount}`,
         ])
         .addField(`Leden Informatie`, [
-            `**➠ Online:** ${members.filter(member => member.presence.status === 'online')}`,
-            `**➠ Inactief:** ${members.filter(member => member.presence.status === 'idle')}`,
-            `**➠ Niet Storen:** ${members.filter(member => member.presence.status === 'dnd')}`,
-            `**➠ Offline:** ${members.filter(member => member.presence.status === 'offline')}`,
+            `**➠ Online:** ${member.filter(member => member.presence.status === 'online')}`,
+            `**➠ Inactief:** ${member.filter(member => member.presence.status === 'idle')}`,
+            `**➠ Niet Storen:** ${member.filter(member => member.presence.status === 'dnd')}`,
+            `**➠ Offline:** ${member.filter(member => member.presence.status === 'offline')}`,
         ])
         .setTimestamp();
 
