@@ -14,7 +14,6 @@ module.exports.run = async (client, message, args) => {
             `**➠ Gemaakt op:** ${message.guild.createdTimestamp}`,
         ])
         .addField(`Statestieken`, [
-            `**➠ Aantal Rollen:** ${roles.length}`,
             `**➠ Aantal Leden:** ${message.guild.memberCount}`,
             `**➠ Aantal BOTS:** ${members.filter(member => member.user.bot).size}`,
             `**➠ Aantal Tekstkanalen:** ${channels.filter(channel => channel.type === 'text').size}`,
