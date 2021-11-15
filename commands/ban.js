@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
 
     if (!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply(":x: **-** FOUT! Ik ben niet gemachtigd om deze actie uit te voeren voor jou.");
 
-    var banUser = message.guild.member(message.mentions.users.first());
+    var banUser = mentions.users.first()
 
     var reason = args.slice(2).join(" ");
 
@@ -38,7 +38,7 @@ module.exports.run = async (client, message, args) => {
 
             msg.delete();
 
-            message.mentions.users.first().ban(reason)
+            banUser.ban()
 
             message.reply(embed);
 
