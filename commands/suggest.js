@@ -1,5 +1,4 @@
 const discord = require("discord.js");
-const botConfig = require("./botConfig.json");
 
 module.exports.run = async (client, message, args) => {
 
@@ -9,12 +8,10 @@ module.exports.run = async (client, message, args) => {
 
     var Suggestie = args.join(" ");
 
-    var prefix = botConfig.prefix;
-
     var embed = new discord.MessageEmbed()
             .setThumbnail(message.author.displayAvatarURL())
             .setTitle("Snwy Community - Suggestie")
-            .setDescription(`Nieuwe Suggestie!\n\n**Suggestie:** ${Suggestie}\n**Ingezonden door:** ${message.author}\n\n\n*Bedankt voor het aanmaken van een Suggestie! Laat een idee achter doormiddel van ``${prefix}suggestie (suggestie)`` `)
+            .setDescription(`Nieuwe Suggestie!\n\n**Suggestie:** ${Suggestie}\n**Ingezonden door:** ${message.author}\n\n\n*Bedankt voor het aanmaken van een Suggestie! Laat een idee achter doormiddel van ``s!suggestie (suggestie)`` `)
             .setColor("BLUE")
             .setFooter(`${message.member.displayName} • Snwy Community • Suggesties`)
             .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
