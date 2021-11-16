@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
     const embed = new discord.MessageEmbed()
         .setTitle("Snwy Community - Reaction Roles")
         .setAuthor("Snwy Community", "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
-        .setDescription(`Selecteer hieronder voor welke dingen jij een tag wilt ontvangen, zodra je een emoji hebt aangeklikt mis je nooit wat!\n\n**${youtubeEmoji} Nieuwe Youtube Video's\n${tiktokEmoji} Nieuwe TikTok Post\n${updatesEmoji} Gloednieuwe Updates\n${pollEmoji} Nieuwe Polls\n${giveawayEmoji} Leuke Giveaways`)
+        .setDescription(`Selecteer hieronder voor welke dingen jij een tag wilt ontvangen, zodra je een emoji hebt aangeklikt mis je nooit wat!\n\n**${youtubeEmoji} Nieuwe Youtube Video's\n${tiktokEmoji} Nieuwe TikTok Post\n${updatesEmoji} Gloednieuwe Updates\n${pollEmoji} Nieuwe Polls\n${giveawayEmoji} Leuke Giveaways**`)
         .setColor("PURPLE")
         .setThumbnail("https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
         .setFooter("Snwy Community • Reaction Roles")
