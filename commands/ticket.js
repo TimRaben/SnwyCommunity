@@ -4,6 +4,8 @@ module.exports.run = async (client, message, args) => {
 
     const channel = "910149697203732533";
 
+    var categoryID = "910270086605062235";
+
     const embed = new discord.MessageEmbed()
         .setTitle("Snwy Community - Ticket Systeem")
         .setAuthor("Snwy Community", "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
