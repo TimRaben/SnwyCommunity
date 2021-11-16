@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
         if (user.bot) return;
 
         if (reaction.message.channel.id == channel) {
-            if (reaction.emoji.name == "📋") {
+            if (reaction.emoji.name == '📋') {
                 message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args) => {
                                 settedParent.send(`Gelukt!`).then(msg => msg.delete({ timeout: 1000}));
             
                             });
-            } else if (reaction.emoji.name == "❓") {
+            } else if (reaction.emoji.name == '❓') {
                 message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
@@ -187,7 +187,7 @@ module.exports.run = async (client, message, args) => {
                                 settedParent.send(`Gelukt!`).then(msg => msg.delete({ timeout: 1000}));
             
                             });
-            } else if (reaction.emoji.name == updatesEmoji) {
+            } else if (reaction.emoji.name == '🔒') {
                 message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
