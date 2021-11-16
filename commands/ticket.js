@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
     const embed = new discord.MessageEmbed()
         .setTitle("Snwy Community - Ticket Systeem")
         .setAuthor("Snwy Community", "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
-        .setDescription(`Hallo! Wij als Support Team staan altijd voor je klaar, maak gerust een ticket aan, wees er wel van bewust dat je de goede categorie kiest!\n\n📋 **|** Overig (deze tickets zijn zichtbaar voor elk stafflid)\n❓ **|** Vragen (deze tickets zijn zichtbaar voor elk stafflid)\n🔒 **|** Lead Ticket (deze tickets is zichtbaar voor enkel Manager en hoger)`)
+        .setDescription(`Hallo! Wij als Support Team staan altijd voor je klaar, maak gerust een ticket aan, wees er wel van bewust dat je de goede categorie kiest!\n\n📋 **|** Overig (deze tickets zijn zichtbaar voor elk stafflid)\n❓ **|** Vragen (deze tickets zijn zichtbaar voor elk stafflid)\n🔒 **|** Lead Ticket (deze tickets is zichtbaar voor enkel Manager en hoger)\n\n`)
         .setColor("PURPLE")
         .setThumbnail("https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
         .setFooter("Snwy Community • Ticket Systeem");
@@ -92,7 +92,7 @@ module.exports.run = async (client, message, args) => {
                                                 .setColor("PURPLE")
                                                 .setAuthor("Snwy Community", "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
                                                 .setThumbnail("https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
-                                                .setDescription(`Hallo! Bedankt voor het aanmaken van een ticket, je hebt zojuist een aantal vragen ingevuld, Staff zou je z.s.m. helpen!\n\n**Waarmee Staff kan helpen:**\n${antwoord1o}\n\n**Precieze Reden van deze Ticket:**\n${antwoord2o}\n**Eventuele Toevoegingen:**\n${antwoord3o}\n\n*Een van onze Staffleden zal je z.s.m. helpen!*`)
+                                                .setDescription(`Hallo! Bedankt voor het aanmaken van een ticket, je hebt zojuist een aantal vragen ingevuld, Staff zou je z.s.m. helpen!\n\n**Waarmee Staff kan helpen:**\n${antwoord1o}\n\n**Precieze Reden van deze Ticket:**\n${antwoord2o}\n\n**Eventuele Toevoegingen:**\n${antwoord3o}\n\n*Een van onze Staffleden zal je z.s.m. helpen!*`)
             
                                             settedParent.bulkDelete(6).then(
                                                 settedParent.send("<@&870021783649148968>", overigeticket)
@@ -171,7 +171,7 @@ module.exports.run = async (client, message, args) => {
                                                 .setColor("PURPLE")
                                                 .setAuthor("Snwy Community", "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
                                                 .setThumbnail("https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
-                                                .setDescription(`Hallo! Bedankt voor het aanmaken van een ticket, je hebt zojuist een aantal vragen ingevuld, Staff zou je z.s.m. helpen!\n\n**Waarmee Staff kan helpen:**\n${antwoord1v}\n\n**Precieze Reden van deze Ticket:**\n${antwoord2v}\n**Eventuele Toevoegingen:**\n${antwoord3v}\n\n*Een van onze Staffleden zal je z.s.m. helpen!*`)
+                                                .setDescription(`Hallo! Bedankt voor het aanmaken van een ticket, je hebt zojuist een aantal vragen ingevuld, Staff zou je z.s.m. helpen!\n\n**Waarmee Staff kan helpen:**\n${antwoord1v}\n\n**Precieze Reden van deze Ticket:**\n${antwoord2v}\n\n**Eventuele Toevoegingen:**\n${antwoord3v}\n\n*Een van onze Staffleden zal je z.s.m. helpen!*`)
                                                 .setFooter("Snwy Community - Ticket Systeem - Vragen")
 
                                             settedParent.bulkDelete(6).then(
@@ -251,7 +251,7 @@ module.exports.run = async (client, message, args) => {
                                                 .setColor("PURPLE")
                                                 .setAuthor("Snwy Community", "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
                                                 .setThumbnail("https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
-                                                .setDescription(`Hallo! Bedankt voor het aanmaken van een ticket, je hebt zojuist een aantal vragen ingevuld, een Manager of hoger zou je z.s.m. helpen!\n\n**Onderwerp**\n${antwoord1l}\n\n**Precieze Reden van deze Ticket:**\n${antwoord2l}\n**Eventuele Toevoegingen:**\n${antwoord3l}\n\n*Een van onze Managers of hoger zal je z.s.m. helpen!*`)
+                                                .setDescription(`Hallo! Bedankt voor het aanmaken van een ticket, je hebt zojuist een aantal vragen ingevuld, een Manager of hoger zou je z.s.m. helpen!\n\n**Onderwerp**\n${antwoord1l}\n\n**Precieze Reden van deze Ticket:**\n${antwoord2l}\n\n**Eventuele Toevoegingen:**\n${antwoord3l}\n\n*Een van onze Managers of hoger zal je z.s.m. helpen!*`)
                                                 .setFooter("Snwy Community - Ticket Systeem - Lead")
 
                                             settedParent.bulkDelete(6).then(
