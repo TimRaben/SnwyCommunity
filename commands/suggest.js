@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
             .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
             .setTimestamp();
 
-            var channel = message.member.guild.channels.cache.get("845994190051737630");
+            var channel = message.member.guild.channels.cache.get("910110344486191106");
     
         channel.send(embed).then(async (msg) => {
             await msg.react('✅');
