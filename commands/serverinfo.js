@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
             `**➠ Aantal Leden:** ${message.guild.memberCount}`,
         ])
         .setTimestamp()
-        .setFooter('Snwy Community | Server Informatie');
+        .setFooter('Snwy Community | Server Informaties');
 
     message.channel.send(embed);
 
