@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    const channel = "910149697203732533";
+    const channel = "909828510934245429";
 
     const categoryID = "910270086605062235";
 
@@ -24,9 +24,7 @@ module.exports.run = async (client, message, args) => {
     embedMessage.react("❓");
     embedMessage.react("🔒");
 
-    client.on("messageReactionAdd", async (reaction, user) => {
-        if (user.bot) return;
-
+    client.on("messageReactionAdd", (reaction, user) => {
         if (reaction.message.channel.id == channel) {
             if (reaction.emoji.name == '📋') {
                 message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
