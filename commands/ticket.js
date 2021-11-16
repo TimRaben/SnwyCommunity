@@ -4,7 +4,12 @@ module.exports.run = async (client, message, args) => {
 
     const channel = "910149697203732533";
 
-    var categoryID = "910270086605062235";
+    const categoryID = "910270086605062235";
+
+    var userName = message.author.username;
+    var user = message.author;
+    var userDiscriminator = message.author.discriminator;
+
 
     const embed = new discord.MessageEmbed()
         .setTitle("Snwy Community - Ticket Systeem")
@@ -101,7 +106,7 @@ module.exports.run = async (client, message, args) => {
             
                                 settedParent.send(`Gelukt!`).then(msg => msg.delete({ timeout: 1000}));
             
-                            })
+                            });
             } else if (reaction.emoji.name == "❓") {
                 message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
                     (createdChannel) => {
@@ -181,7 +186,7 @@ module.exports.run = async (client, message, args) => {
             
                                 settedParent.send(`Gelukt!`).then(msg => msg.delete({ timeout: 1000}));
             
-                            })
+                            });
             } else if (reaction.emoji.name == updatesEmoji) {
                 message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
                     (createdChannel) => {
@@ -261,7 +266,7 @@ module.exports.run = async (client, message, args) => {
             
                                 settedParent.send(`Gelukt!`).then(msg => msg.delete({ timeout: 1000}));
             
-                            })
+                            });
                         }
         } else {
             return;
