@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
 
     var reason = args.slice(2).join(" ");
 
-    if (!banUser) return message.reply(":x: **-** Kan de gebruiker niet vinden!");
+    if (!kickUser) return message.reply(":x: **-** Kan de gebruiker niet vinden!");
 
     var embed = new discord.MessageEmbed()
         .setColor("#ff0000")
