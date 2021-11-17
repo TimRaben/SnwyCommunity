@@ -25,7 +25,9 @@ module.exports.run = async (client, message, args) => {
     embedMessage.react("❓");
     embedMessage.react("🔒");
 
-    client.on("messageReactionAdd", async (reaction, user) => {
+
+
+    client.on('messageReactionAdd', async (reaction, user) => {
         if (user.bot) return;
     
         if (reaction.message.channel.id == channel) {
