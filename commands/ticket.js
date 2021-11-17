@@ -12,7 +12,6 @@ module.exports.run = async (client, message, args) => {
 
     message.delete();
 
-
     const embed = new discord.MessageEmbed()
         .setTitle("Snwy Community - Ticket Systeem")
         .setAuthor("Snwy Community", "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
@@ -21,7 +20,7 @@ module.exports.run = async (client, message, args) => {
         .setThumbnail("https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
         .setFooter("Snwy Community • Ticket Systeem");
 
-    var embedMessage = await channel.send(embed);
+    var embedMessage = await message.channel.send(embed);
     embedMessage.react("📋");
     embedMessage.react("❓");
     embedMessage.react("🔒");
