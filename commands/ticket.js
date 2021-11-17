@@ -103,11 +103,10 @@ module.exports.run = async (client, message, args) => {
                                     })
                                 })
             
-                                settedParent.send(`Gelukt!`).then(msg => msg.delete({ timeout: 1000}));
-            
+                    
                             });
             } else if (reaction.emoji.name == '❓') {
-                message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
+                message.guild.channels.create("ticket" + "-" + "vraag", { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
                             (settedParent) => {
@@ -182,12 +181,9 @@ module.exports.run = async (client, message, args) => {
                                         })
                                     })
                                 })
-            
-                                settedParent.send(`Gelukt!`).then(msg => msg.delete({ timeout: 1000}));
-            
                             });
             } else if (reaction.emoji.name == '🔒') {
-                message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
+                guild.channels.create("ticket" + "-" + "lead", { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
                             (settedParent) => {
@@ -262,8 +258,6 @@ module.exports.run = async (client, message, args) => {
                                         })
                                     })
                                 })
-            
-                                settedParent.send(`Gelukt!`).then(msg => msg.delete({ timeout: 1000}));
             
                             });
                         }
