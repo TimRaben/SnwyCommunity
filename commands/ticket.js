@@ -10,6 +10,8 @@ module.exports.run = async (client, message, args) => {
     var user = message.author;
     var userDiscriminator = message.author.discriminator;
 
+    message.delete();
+
 
     const embed = new discord.MessageEmbed()
         .setTitle("Snwy Community - Ticket Systeem")
