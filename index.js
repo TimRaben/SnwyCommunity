@@ -55,15 +55,15 @@ client.on("ready", async () => {
 client.on('guildMemberAdd', (member) => {
     console.log(member)
 
-    var channelID = '910542711046680637'
+    var channelID = '910542711046680637';
 
-    var regelsChannel = '845680452882792508'
+    var regelsChannel = '845680452882792508';
 
-    var rrChannel = '846021919194218526'
+    var rrChannel = '846021919194218526';
 
-    var ticketChannel = '870005075748216963'
+    var ticketChannel = '870005075748216963';
 
-    var promotieChannel = '894513156536295425'
+    var promotieChannel = '894513156536295425';
 
     const welkomEmbed = new discord.MessageEmbed()
         .setAuthor("Snwy Community", "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
@@ -75,8 +75,8 @@ client.on('guildMemberAdd', (member) => {
         .setImage("https://media.discordapp.net/attachments/909775422047256576/910548369754169364/Snwy_Community_banner.gif")
         .setTimestamp();
 
-    const channel = member.guild.channels.cache.get(channelID)
-    channel.send(welkomEmbed)
+    const channel = client.guild.channels.cache.get(channelID);
+    channel.send(welkomEmbed);
 
     });
 
