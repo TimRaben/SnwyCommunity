@@ -12,10 +12,6 @@ var channelID = '910542711046680637'
 
     var promotieChannel = '894513156536295425'
 
-
-    client.on('guildMemberAdd', (member) => {
-        console.log(member)
-
     const welkomEmbed = new discord.MessageEmbed()
         .setAuthor("Snwy Community", "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
         .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
@@ -25,6 +21,9 @@ var channelID = '910542711046680637'
         .setFooter("Snwy Community - Welkom")
         .setImage("https://media.discordapp.net/attachments/909775422047256576/910548369754169364/Snwy_Community_banner.gif")
         .setTimestamp();
+
+        client.on('guildMemberAdd', (member) => {
+            console.log(member)
 
     const channel = member.guild.channels.cache.get(channelID)
     channel.send(welkomEmbed)
