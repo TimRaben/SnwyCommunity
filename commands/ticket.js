@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args) => {
     embedMessage.react("❓");
     embedMessage.react("🔒");
 
-    client.on("messageReactionAdd", async (reaction, user) => {
+    client.on("messageReactionAdd", (reaction, user) => {
         if (reaction.message.channel.id == channel) {
             if (reaction.emoji.name == '📋') {
                 message.guild.channels.create(ticket.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
