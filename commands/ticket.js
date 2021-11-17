@@ -26,6 +26,8 @@ module.exports.run = async (client, message, args) => {
     embedMessage.react("🔒");
 
     client.on("messageReactionAdd", (reaction, user) => {
+        if (user.bot) return;
+    
         if (reaction.message.channel.id == channel) {
             if (reaction.emoji.name == '📋') {
                 message.guild.channels.create("ticket" + "-" + "overig", { type: 'text' }).then(
@@ -183,7 +185,7 @@ module.exports.run = async (client, message, args) => {
                                 })
                             });
             } else if (reaction.emoji.name == '🔒') {
-                guild.channels.create("ticket" + "-" + "lead", { type: 'text' }).then(
+                message.guild.channels.create("ticket" + "-" + "lead", { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
                             (settedParent) => {
