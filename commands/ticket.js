@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args) => {
     client.on("messageReactionAdd", (reaction, user) => {
         if (reaction.message.channel.id == channel) {
             if (reaction.emoji.name == '📋') {
-                message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
+                message.guild.channels.create("ticket" + "-" + "overig", { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
                             (settedParent) => {
