@@ -1,5 +1,7 @@
 const discord = require("discord.js");
 
+module.exports.run = async (client, message, args) => {
+
 var channelID = '910542711046680637'
 
     var regelsChannel = '845680452882792508'
@@ -28,3 +30,8 @@ var channelID = '910542711046680637'
     channel.send(welkomEmbed)
 
     })
+}
+module.exports.help = {
+    description: "Geeft al de verschillende commands",
+    category: "Informatie",
+}
