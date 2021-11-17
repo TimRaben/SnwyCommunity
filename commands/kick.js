@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 
     var kickUser = message.mentions.members.first();
 
-    var reason = args.slice(2).join(" ");
+    var reason = args.slice(1).join(" ");
 
     if (!kickUser) return message.reply(":x: **-** Kan de gebruiker niet vinden!");
 
