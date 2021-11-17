@@ -19,14 +19,14 @@ module.exports.run = async (client, message, args) => {
         .setThumbnail("https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
         .setFooter("Snwy Community • Ticket Systeem");
 
-    var embedMessage = await message.channel.send(embed);
+    var embedMessage = await channel.send(embed);
     embedMessage.react("📋");
     embedMessage.react("❓");
     embedMessage.react("🔒");
 
     client.on("messageReactionAdd", (reaction, user) => {
         if (reaction.message.channel.id == channel) {
-            if (reaction.emoji.name == "📋") {
+            if (reaction.emoji.name == '📋') {
                 message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
