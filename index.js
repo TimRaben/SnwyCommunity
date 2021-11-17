@@ -52,7 +52,10 @@ client.on("ready", async () => {
 
 });        
 
-var channelID = '910542711046680637'
+client.on('guildMemberAdd', (member) => {
+    console.log(member)
+
+    var channelID = '910542711046680637'
 
     var regelsChannel = '845680452882792508'
 
@@ -71,9 +74,6 @@ var channelID = '910542711046680637'
         .setFooter("Snwy Community - Welkom")
         .setImage("https://media.discordapp.net/attachments/909775422047256576/910548369754169364/Snwy_Community_banner.gif")
         .setTimestamp();
-
-        client.on('guildMemberAdd', (member) => {
-            console.log(member)
 
     const channel = member.guild.channels.cache.get(channelID)
     channel.send(welkomEmbed)
