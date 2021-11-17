@@ -10,6 +10,7 @@ module.exports.run = async (client, message, args) => {
     var user = message.author;
     var userDiscriminator = message.author.discriminator;
 
+
     const embed = new discord.MessageEmbed()
         .setTitle("Snwy Community - Ticket Systeem")
         .setAuthor("Snwy Community", "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
@@ -19,12 +20,11 @@ module.exports.run = async (client, message, args) => {
         .setFooter("Snwy Community • Ticket Systeem");
 
     var embedMessage = await message.channel.send(embed);
-    
     embedMessage.react("📋");
     embedMessage.react("❓");
     embedMessage.react("🔒");
 
-    client.on("messageReactionAdd", async (reaction, user) => {
+    client.on("messageReactionAdd", (reaction, user) => {
         if (reaction.message.channel.id == channel) {
             if (reaction.emoji.name == '📋') {
                 message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
@@ -52,7 +52,6 @@ module.exports.run = async (client, message, args) => {
                                     .setDescription(`Hallo ${message.author.username}, Hieronder worden automatisch vragen gesteld, geef hier zo duidelijk en uitgebreid mogelijk antwoord op waardoor wij je z.s.m. kunnen helpen!`)
                                     .setAuthor("Snwy Community", "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
                                     .setFooter('Snwy Community - Ticket Systeem')
-                                    .setColor("PURPLE")
             
                                 var staff = "870021783649148968";
                                 var person = message.author;
@@ -107,7 +106,7 @@ module.exports.run = async (client, message, args) => {
             
                             });
             } else if (reaction.emoji.name == '❓') {
-                message.guild.channels.create(vraag.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
+                message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
                             (settedParent) => {
@@ -132,7 +131,6 @@ module.exports.run = async (client, message, args) => {
                                     .setDescription(`Hallo ${message.author.username}, Hieronder worden automatisch vragen gesteld, geef hier zo duidelijk en uitgebreid mogelijk antwoord op waardoor wij je z.s.m. kunnen helpen!`)
                                     .setAuthor("Snwy Community", "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
                                     .setFooter('Snwy Community - Ticket Systeem')
-                                    .setColor("PURPLE")
             
                                 var staff = "870021783649148968";
                                 var person = message.author;
@@ -188,7 +186,7 @@ module.exports.run = async (client, message, args) => {
             
                             });
             } else if (reaction.emoji.name == '🔒') {
-                message.guild.channels.create(lead.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
+                message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
                             (settedParent) => {
@@ -213,7 +211,6 @@ module.exports.run = async (client, message, args) => {
                                     .setDescription(`Hallo ${message.author.username}, Hieronder worden automatisch vragen gesteld, geef hier zo duidelijk en uitgebreid mogelijk antwoord op waardoor wij je z.s.m. kunnen helpen!`)
                                     .setAuthor("Snwy Community", "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
                                     .setFooter('Snwy Community - Ticket Systeem')
-                                    .setColor("PURPLE")
             
                                 var staff = "870021783649148968";
                                 var person = message.author;
