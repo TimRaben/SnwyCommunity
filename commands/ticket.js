@@ -24,10 +24,10 @@ module.exports.run = async (client, message, args) => {
     embedMessage.react("❓");
     embedMessage.react("🔒");
 
-    client.on("messageReactionAdd", (reaction, user) => {
+    client.on("messageReactionAdd", async (reaction, user) => {
         if (reaction.message.channel.id == channel) {
             if (reaction.emoji.name == '📋') {
-                message.guild.channels.create(ticket.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
+                message.guild.channels.create("ticket".toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
                             (settedParent) => {
@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args) => {
             
                             });
             } else if (reaction.emoji.name == '❓') {
-                message.guild.channels.create(vraag.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
+                message.guild.channels.create("vraag".toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
                             (settedParent) => {
@@ -188,7 +188,7 @@ module.exports.run = async (client, message, args) => {
             
                             });
             } else if (reaction.emoji.name == '🔒') {
-                message.guild.channels.create(lead.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
+                message.guild.channels.create("lead".toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
                             (settedParent) => {
