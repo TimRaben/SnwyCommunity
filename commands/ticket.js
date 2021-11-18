@@ -111,6 +111,9 @@ module.exports.run = async (client, message, args) => {
                     
                             });
             } else if (reaction.emoji.name == '❓') {
+
+                reaction.users.remove(user)
+                
                 message.guild.channels.create("ticket" + "-" + "vraag", { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
@@ -182,8 +185,6 @@ module.exports.run = async (client, message, args) => {
                                             settedParent.bulkDelete(6).then(
                                                 settedParent.send("<@&870021783649148968>", vraagticket)
                                             )
-
-                                            reaction.users.remove(user)
 
                                             })
 
