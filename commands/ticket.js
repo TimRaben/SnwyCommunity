@@ -25,8 +25,6 @@ module.exports.run = async (client, message, args) => {
     embedMessage.react("❓");
     embedMessage.react("🔒");
 
-    embed.delete(3600000);
-
     client.on('messageReactionAdd', async (reaction, user) => {
         if (user.bot) return;
     
