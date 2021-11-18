@@ -30,6 +30,9 @@ module.exports.run = async (client, message, args) => {
     
         if (reaction.message.channel.id == channel) {
             if (reaction.emoji.name == '📋') {
+
+                reaction.users.remove(user)
+
                 message.guild.channels.create("ticket" + "-" + "overig", { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
@@ -101,8 +104,6 @@ module.exports.run = async (client, message, args) => {
                                                 settedParent.send("<@&870021783649148968>", overigeticket)
                                             )
 
-                                                reaction.users.remove(user)
-
                                             })
                                         })
                                     })
@@ -113,7 +114,7 @@ module.exports.run = async (client, message, args) => {
             } else if (reaction.emoji.name == '❓') {
 
                 reaction.users.remove(user)
-                
+
                 message.guild.channels.create("ticket" + "-" + "vraag", { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
@@ -195,6 +196,9 @@ module.exports.run = async (client, message, args) => {
                                 })
                             });
             } else if (reaction.emoji.name == '🔒') {
+
+                reaction.users.remove(user)
+
                 message.guild.channels.create("ticket" + "-" + "lead", { type: 'text' }).then(
                     (createdChannel) => {
                         createdChannel.setParent(categoryID).then(
