@@ -78,7 +78,7 @@ client.on("ready", async () => {
     
         });
 
-    var channel = client.guild.channels.find(channel => channel.id === '909828510934245429');
+    var channel = client.guild.channels.cache.get('909828510934245429');
 
     setInterval(() => {
         channel.send("s!ticket-setup");
