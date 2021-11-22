@@ -280,9 +280,7 @@ module.exports.run = async (client, message, args) => {
             
                             });
                         }
-        } else {
-            return;
-        }
+        } 
     });
 
 }
