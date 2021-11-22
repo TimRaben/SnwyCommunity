@@ -78,10 +78,10 @@ client.on("ready", async () => {
     
         });
 
-    var channel = client.guild.channels.cache.get('909828510934245429');
+    var channel12 = client.channels.cache.get('909828510934245429');
 
     setInterval(() => {
-        channel.send("s!ticket-setup");
+        channel12.send("s!ticket-setup");
     }, 5000);
 
 });        
