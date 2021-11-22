@@ -77,13 +77,6 @@ client.on("ready", async () => {
         channel.send(welkomEmbed);
     
         });
-
-    var channel12 = client.channels.cache.get('909828510934245429');
-
-    setInterval(() => {
-        channel12.send("s!ticket-setup");
-    }, 5000);
-
 });        
 
 
