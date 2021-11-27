@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    const channel = "910149697203732533";
+    const channel = "914182141137522688";
 
     const youtubeEmoji = "⚡";
     const tiktokEmoji = "🌍";
