@@ -4,11 +4,11 @@ module.exports.run = async (client, message, args) => {
 
     const channel = "910149697203732533";
 
-    const youtubeEmoji = "<:Youtube:910151601086398504>";
-    const tiktokEmoji = "<:Tiktok:910151802685624330>";
-    const updatesEmoji = "<:AnnouncementPaars:910151649547391027>";
-    const pollEmoji = "<:poll:910153235959013436>";
-    const giveawayEmoji = "<:Nitro:910151753842966589>"
+    const youtubeEmoji = "⚡";
+    const tiktokEmoji = "🌍";
+    const updatesEmoji = "🧪";
+    const pollEmoji = "🔒";
+    const giveawayEmoji = "🎫"
 
     const youtubeRol = message.guild.roles.cache.find(role => role.name === "YoutubePings");
     const tiktokRol = message.guild.roles.cache.find(role => role.name === "TikTokPings");
