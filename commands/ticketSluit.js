@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    const categoryID = "910270086605062235";
+    const categoryID = "914169722197671957";
 
     if (message.channel.parentID == categoryID) {
         message.channel.delete();
