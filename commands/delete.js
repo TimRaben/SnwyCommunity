@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    discord.Channel.delete("ticket-overig")
+    message.guild.channels.delete("ticket-overig");
         
     }
 
