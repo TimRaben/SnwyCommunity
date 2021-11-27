@@ -37,9 +37,9 @@ module.exports.run = async (client, message, args) => {
 
         if (reaction.message.channel.id == channel) {
             if (reaction.emoji.name == youtubeEmoji) {
-                await reaction.message.guild.members.cache.get(user.id).roles.add(youtubeEmoji);
+                await reaction.message.guild.members.cache.get(user.id).roles.add(youtubeRol);
             } else if (reaction.emoji.name == tiktokEmoji) {
-                await reaction.message.guild.members.cache.get(user.id).roles.add(tiktokEmoji);
+                await reaction.message.guild.members.cache.get(user.id).roles.add(tiktokRol);
             } else if (reaction.emoji.name == updatesEmoji) {
                 await reaction.message.guild.members.cache.get(user.id).roles.add(updatesEmoji);
             } else if (reaction.emoji.name == pollEmoji) {
