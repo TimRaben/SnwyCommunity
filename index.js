@@ -75,7 +75,6 @@ client.on("ready", async () => {
     
         const channel = client.guild.channels.cache.get(channelID);
         channel.send(welkomEmbed);
-    
         });
 });        
 
