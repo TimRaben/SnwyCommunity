@@ -44,6 +44,7 @@ module.exports.run = async (client, message, args) => {
                         CONNECT: true,
                         ADD_REACTIONS: true
                     });
+                })
 
                     var embedParent = new discord.MessageEmbed()
                         .setTitle(`Ticket Systeem - Snwy Community`)
@@ -104,7 +105,6 @@ module.exports.run = async (client, message, args) => {
                     settedParent.send(`Gelukt!`).then(msg => msg.delete({ timeout: 1000}));
 
                 })
-            })
 }
 
 
