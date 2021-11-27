@@ -25,9 +25,6 @@ module.exports.run = async (client, message, args) => {
 
         }
 
-
-    });
-
     message.guild.channels.create("ticket" + "-" + "overig", { type: 'text' }).then(
         (createdChannel) => {
             createdChannel.setParent(categoryID).then(
@@ -107,6 +104,7 @@ module.exports.run = async (client, message, args) => {
                     settedParent.send(`Gelukt!`).then(msg => msg.delete({ timeout: 1000}));
 
                 })
+            });
 }
 
 
