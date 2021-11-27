@@ -2,8 +2,9 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
+    var channelid = 'ticket-overig'
 
-    channel.delete('ticket-overig')
+    channelid.channel.delete('ticket-overig')
         
     }
 
