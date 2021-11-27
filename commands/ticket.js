@@ -44,7 +44,6 @@ module.exports.run = async (client, message, args) => {
                         CONNECT: true,
                         ADD_REACTIONS: true
                     });
-                })
 
                     var embedParent = new discord.MessageEmbed()
                         .setTitle(`Ticket Systeem - Snwy Community`)
@@ -96,6 +95,7 @@ module.exports.run = async (client, message, args) => {
                                 settedParent.bulkDelete(6).then(
                                     settedParent.send("<@&870021783649148968>", overigeticket)
                                 )
+                            })
 
                                 })
                             })
