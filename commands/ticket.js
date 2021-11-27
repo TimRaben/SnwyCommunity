@@ -75,12 +75,11 @@ module.exports.run = async (client, message, args) => {
                                         .setColor("PURPLE")
                                         .setAuthor("Snwy Community", "https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
                                         .setThumbnail("https://tikstar-user-images.oss-cn-hongkong.aliyuncs.com/92b3_6982470257928504321.jpg")
-                                        .setDescription(`Hallo! Bedankt voor het aanmaken van een ticket, je hebt zojuist een aantal vragen ingevuld, Staff zou je z.s.m. helpen!\n\n**Waarmee Staff kan helpen:**\n${antwoord1o}\n\n**Precieze Reden van deze Ticket:**\n${antwoord2o}\n\n**Eventuele Toevoegingen:**\n${antwoord3o}\n\n*Een van onze Staffleden zal je z.s.m. helpen!*`)
+                                        .setDescription(`Hallo! Bedankt voor het aanmaken van een ticket, je hebt zojuist een aantal vragen ingevuld, Staff zou je z.s.m. helpen!\n\n**Waarmee Staff kan helpen:**\n${antwoord1}\n\n**Precieze Reden van deze Ticket:**\n${antwoord2}\n\n**Eventuele Toevoegingen:**\n${antwoord3}\n\n*Een van onze Staffleden zal je z.s.m. helpen!*`)
             
                                         settedParent.bulkDelete(6).then(
-                                            settedParent.send('<@&870021783649148968>')
+                                            settedParent.send('<@&870021783649148968>', overigeticket)
                                 )
-                                settedParent.send(overigeticket)
                                 })
                             })
                         })
